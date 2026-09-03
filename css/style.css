@@ -1,0 +1,40 @@
+.kiichi_yuumi{
+    width: 300px;
+    transform: translateX(-150px);
+    transition:transform 1s ease;
+    color: transparent;
+}
+
+.kiichi_yuumi:hover{
+    transform: translateX(0px);
+    color: black;
+}
+
+.account4{
+    width: 300px;
+    transform: translateX(-100px);
+    transition:transform 1s ease;
+    color: transparent;
+}
+
+.account4:hover{
+    transform: translateX(0px);
+    color: black;
+}
+
+.account44:hover{
+     animation: spin 0.1s linear infinite;
+}
+
+html{
+    background-color: darkgray;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
