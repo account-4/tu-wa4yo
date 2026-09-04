@@ -13,22 +13,54 @@
 <body>
   <div class="app">
     <header class="menu">
-      ファイル　編集　表示　ヘルプ
+      <a class="file" tabindex="0">ファイル
+        <div class="fileMenu">
+          あいうえお<br>
+          あいおうえ
+        </div>
+      </a>
+      <a class="edit" tabindex="0">編集
+        <div class="editMenu">
+          あいうえお<br>
+          あいおうえ
+        </div>
+      </a>
+      <a class="view" tabindex="0">表示
+        <div class="viewMenu">
+          あいうえお<br>
+          あいおうえ
+        </div>
+      </a>
+      <a class="help" tabindex="0">ヘルプ
+        <div class="helpMenu">
+          あいうえお<br>
+          あいおうえ
+        </div>
+      </a>
+
+
     </header>
     <div class="workspace">
       <div class="sideExplorer">
-        へつほつ
+        <header class="sideExplorerMenu">
+          エクスプローラー<button id="collapseBtn">-</button>
+          </header>
+          <div class="sideExplorerContents">
+        エクスプローラー
+        </div>
       </div>
       <div class="window">
         <div id="windowExplorer" class="windowExplorer" hidden>
-          <button id="closeBtn">閉</button>
-          えくすぷろーーーーらーーーー
+          <header class="windowExplorerMenu">
+            <button id="closeBtn">閉</button>　ウィンドウエクスプローラー
+          </header>
+          ウィンドウエクスプローラー
         </div>
         <header class="windowMenu">
-          開　新　保　<button id="openBtn">開</button>
+          <button id="openBtn">開</button>　新　保　
         </header>
         <header>
-          <div id="windowName" class="windowName">ウィンドウ名</div>
+          <div id="windowName" class="windowName">仮のリンク。</div>
         </header>
         <article id="windowContents" class="windowContents">
           <div class="flexLine">

@@ -23,7 +23,7 @@ body {
 
 * {
   font-family: monospace;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h3 {
@@ -37,6 +37,18 @@ h3 {
   background-color: #fefefe;
   border: 1px solid #000000;
   margin-right: 6px;
+}
+
+.sideExplorerContents{
+    padding: 4px;
+}
+
+.sideExplorerMenu,
+.windowMenu,
+.windowExplorerMenu {
+  flex-shrink: 0;
+  padding: 4px;
+  border-bottom: 1px solid #5c6460;
 }
 
 @media (max-aspect-ratio: 4/3) {
@@ -55,28 +67,30 @@ h3 {
   position: relative;
 }
 
-.windowExplorer{
-    position: absolute;
-    inset: 0;
-    background-color: #000000aa;
+.windowMenu {
 }
 
-.windowMenu {
-  flex-shrink: 0;
-  padding: 4px;
-  border-bottom: 1px solid #5c6460;
+.windowExplorer {
+  position: absolute;
+  inset: 0;
+  background-color: #000000aa;
+}
+
+.windowExplorerMenu {
+  color: white;
+  background-color: #000000;
 }
 
 .windowName {
   flex-shrink: 0;
-  background-color: #35cc81;
+  border-bottom: 1px solid #5c6460;
   padding: 3px;
 }
 
 .windowContents {
-    flex:1;
-    min-height:0;
-    overflow:auto;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
 }
 
 .flexLine {
@@ -100,4 +114,33 @@ h3 {
   padding: 8px;
   overflow-wrap: anywhere;
   word-break: normal;
+}
+
+/*トップメニュー*/
+.file,
+.edit,
+.view,
+.help {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.fileMenu,
+.editMenu,
+.viewMenu,
+.helpMenu {
+  width: 180px;
+  display: none;
+  border: 1px solid #000000;
+  background-color: #fefefe;
+  position: absolute;
+  z-index: 9999;
+}
+
+.file:focus .fileMenu,
+.edit:focus .editMenu,
+.view:focus .viewMenu,
+.help:focus .helpMenu {
+  display: block;
 }
