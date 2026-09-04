@@ -1,57 +1,103 @@
 body {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: rgb(7, 10, 10);
   margin: 0;
 }
 
-*{
-    font-family: monospace;
+.app {
+  display: flex;
+  padding: 6px;
+  flex-direction: column;
+  height: 100vh;
 }
 
-h3{
-    margin: 0;
+.menu {
+  padding: 2px;
+  min-height: 10px;
+  flex-shrink: 0;
 }
 
-.wrapper {
+.workspace {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+* {
+  font-family: monospace;
+    box-sizing: border-box;
+}
+
+h3 {
+  margin: 0;
+}
+
+.sideExplorer {
+  flex-shrink: 0;
+  width: 20vw;
+  max-width: 500px;
+  background-color: #fefefe;
+  border: 1px solid #000000;
+  margin-right: 6px;
+}
+
+@media (max-aspect-ratio: 4/3) {
+  .sideExplorer {
+    display: none;
+  }
+}
+
+.window {
+  flex-direction: column;
+  display: flex;
+  min-height: 0;
+  min-width: 0;
   width: 100%;
-  max-width: 1400px;
-  min-height: 100%;
-  background-color: #0e1414;
+  border: 1px solid #000000;
+  position: relative;
 }
 
-.headerMenu {
-    padding: 4px;
-    border-bottom: 1px solid #5c6460;
+.windowExplorer{
+    position: absolute;
+    inset: 0;
+    background-color: #000000aa;
 }
 
-.flexLine{
+.windowMenu {
+  flex-shrink: 0;
+  padding: 4px;
+  border-bottom: 1px solid #5c6460;
+}
+
+.windowName {
+  flex-shrink: 0;
+  background-color: #35cc81;
+  padding: 3px;
+}
+
+.windowContents {
+    flex:1;
+    min-height:0;
+    overflow:auto;
+}
+
+.flexLine {
   display: flex;
 }
 
-.darkWindow{
-    color: #7d8581;
-    margin: 16px;
-    border: 1px solid #5c6460;
-    background-color: #122220;
+.box {
+  background-color: transparent;
+  padding: 8px;
+  width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
-.box{
-    background-color: transparent;
-    padding: 8px;
-    width: 100%;
-    overflow-wrap: anywhere;
-    word-break: normal;
-}
-
-.sideBox{
-    color: #8e9793;
-    background-color: #5c6460;
-    border: 1px sloid #35cc81;
-    width: 45vw;
-    max-width: 400px;
-    padding: 8px;
-    overflow-wrap: anywhere;
-    word-break: normal;
+.sideBox {
+  color: #8e9793;
+  background-color: #5c6460;
+  border: 1px sloid #35cc81;
+  width: 45vw;
+  max-width: 400px;
+  padding: 8px;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }

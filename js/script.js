@@ -1,5 +1,6 @@
+//ボタンを押すと取得したhtmlを流し込む。
 document.addEventListener('DOMContentLoaded', () => {
-  // IDlist
+  // IDlistをここに
   const targetIds = ['header', 'footer'];
   const commonHtmlPath = '/common/html/menu.html';
 
@@ -26,4 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(() => {
 
     });
+});
+
+//Explorer の表示
+document.getElementById('openBtn').addEventListener('click', () => {
+  document.getElementById('windowExplorer').hidden = false; // 開くボタンは false 固定
+});
+
+document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('windowExplorer').hidden = true; // 閉じるボタンは true 固定
 });
