@@ -13,22 +13,23 @@
 <body>
   <div class="app">
     <header class="menu">
-      <a class="file" tabindex="0">ファイル
+      <div class="topMenu">
+      <a class="file" tabindex="0">ファイル　
         <div class="fileMenu">
           あいうえお<br>
           あいおうえ
         </div>
       </a>
-      <a class="edit" tabindex="0">編集
+      <a class="edit" tabindex="0">編集　
         <div class="editMenu">
           あいうえお<br>
           あいおうえ
         </div>
       </a>
-      <a class="view" tabindex="0">表示
+      <a class="view" tabindex="0">表示　
         <div class="viewMenu">
           あいうえお<br>
-          あいおうえ
+          エクスプローラーを表示<input type="checkbox" class="explorerToggle" checked>
         </div>
       </a>
       <a class="help" tabindex="0">ヘルプ
@@ -37,16 +38,21 @@
           あいおうえ
         </div>
       </a>
+      </div>
+
+      <div class="closeMenu">
+        <a href="/404.html">×</a>
+      </div>
 
 
     </header>
     <div class="workspace">
       <div class="sideExplorer">
         <header class="sideExplorerMenu">
-          エクスプローラー<button id="collapseBtn">-</button>
-          </header>
-          <div class="sideExplorerContents">
-        エクスプローラー
+          エクスプローラー<button id="collapseBtn">-</button><input type="checkbox" class="explorerToggle" checked>
+        </header>
+        <div class="sideExplorerContents">
+          エクスプローラー
         </div>
       </div>
       <div class="window">
@@ -57,7 +63,7 @@
           ウィンドウエクスプローラー
         </div>
         <header class="windowMenu">
-          <button id="openBtn">開</button>　新　保　
+          <button id="openBtn">開</button>　新　保
         </header>
         <header>
           <div id="windowName" class="windowName">仮のリンク。</div>
@@ -77,8 +83,11 @@
         </article>
       </div>
     </div>
+    <footer style="text-align: right; padding-top:3px;">
+      ■Last updated:2026.09.05-/18:51
+    </footer>
   </div>
-
-  <script src="/js/script.js"></script>
+</body>
+<script src="/js/script.js"></script>
 
 </html>

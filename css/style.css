@@ -13,6 +13,17 @@ body {
   padding: 2px;
   min-height: 10px;
   flex-shrink: 0;
+  display: flex;
+  width: 100%;
+}
+
+.topMenu{
+  width: 90vw;
+}
+
+.closeMenu{
+  width: 100%;
+  text-align: right;
 }
 
 .workspace {
@@ -51,9 +62,9 @@ h3 {
   border-bottom: 1px solid #5c6460;
 }
 
-@media (max-aspect-ratio: 4/3) {
+@media (max-aspect-ratio: 1/1) {
   .sideExplorer {
-    display: none;
+    width: 28vw;
   }
 }
 
@@ -138,9 +149,10 @@ h3 {
   z-index: 9999;
 }
 
-.file:focus .fileMenu,
-.edit:focus .editMenu,
-.view:focus .viewMenu,
-.help:focus .helpMenu {
-  display: block;
+.menuOpen {
+  display: block !important;
+}
+
+.explorerToggle{
+
 }
